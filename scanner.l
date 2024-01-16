@@ -6,7 +6,14 @@
 /* This file contains flex input file */
 
 
- 
+ /* ---------------- verify the tokens  
+REMOP
+NEGOP
+RELOP
+ARROW
+OTHERS
+HEX_LITERAL
+*/
 
 
 %{
