@@ -8,12 +8,9 @@ using namespace std;
 
 static int lineNumber; // Static variable for keeping track of line numbers
 static int totalErrors = 0; // Static variable to count the total number of errors
-
 static int lexicalErrors = 0;
 static int syntaxErrors = 0;
-static int generalSemanticErrors = 0;
-static int duplicateIdentifierErrors = 0;
-static int undeclaredIdentifierErrors = 0;
+static int semanticErrors = 0;
 static queue<string> errorQueue; // Queue to store error messages
 
 void displayErrors();
@@ -47,9 +44,7 @@ int lastLine()
     {
         printf("Lexical Errors %d\n", lexicalErrors);
         printf("Syntax Errors %d\n", syntaxErrors);
-        printf("General Semantic Errors %d\n", generalSemanticErrors);
-        printf("Duplicate Identifier Errors %d\n", duplicateIdentifierErrors);
-        printf("Undeclared Identifier Errors %d\n", undeclaredIdentifierErrors);
+        printf("Semantic Errors %d\n", semanticErrors);
     }
 
     return lineNumber;
@@ -72,13 +67,7 @@ void appendError(ErrorCategories errorCategory, string message)
             syntaxErrors++;
             break;
         case GENERAL_SEMANTIC:
-            generalSemanticErrors++;
-            break;
-        case DUPLICATE_IDENTIFIER:
-            duplicateIdentifierErrors++;
-            break;
-        case UNDECLARED:
-            undeclaredIdentifierErrors++;
+            semanticErrors++;
             break;
     }
 

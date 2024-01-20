@@ -1,0 +1,4 @@
+
+rm -rf compile lexemes.txt scanner.c scanner.o listing.o
+
+for i in {4..8}; do ./compile < ../p1data/test$i.txt; done\n
