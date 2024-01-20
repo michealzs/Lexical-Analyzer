@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name:
+      run: build
     - name: remove unwanted files
       run: rm -rf compile lexemes.txt scanner.c scanner.o listing.o
     - name: make
