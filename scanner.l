@@ -52,7 +52,7 @@ hex 			#[0-9A-Fa-f]+
 "+"      	{ ECHO; return(ADDOP); }
 "-"        { ECHO; return(ADDOP); }
 "/"        { ECHO; return(MULOP); }
-"%"        { ECHO; return(MODOP); }
+"%"        { ECHO; return(REMOP); }
 "^"        { ECHO; return(EXPOP); }
 "~"        { ECHO; return(NEGOP); }
 "*"      	{ ECHO; return(MULOP); }
