@@ -39,7 +39,7 @@ id    		[A-Za-z]([A-Za-z0-9]|(_[A-Za-z0-9])|(__[A-Za-z0-9]))*([A-Za-z0-9]+)?
 float   		[-+.]?([0-9]+\.[0-9]*|\.[0-9]+)([eE][-+]?[0-9]+)?
 digit    	[0-9]
 dec      	{digit}+
-char     	'.'
+char    '\\[btnrf]'|'.'
 punc     	[\(\),:;]
 real     	[0-9]*\.[0-9]+([Ee][+-]?[0-9]+)?
 hex 			#[0-9A-Fa-f]+
@@ -97,7 +97,7 @@ when     { ECHO; return(WHEN); }
 {punc}      { ECHO; return(yytext[0]); }
 .     { ECHO; appendError(LEXICAL, yytext); }
 {hex} { ECHO; return(HEX_LITERAL); }
-'\\[btnf]'  { ECHO; return(CHAR_LITERAL); }
+
 
 
 %%
