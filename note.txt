@@ -1,3 +1,4 @@
+#!/bin/bash
 
 rm -rf compile lexemes.txt scanner.c scanner.o listing.o
 
