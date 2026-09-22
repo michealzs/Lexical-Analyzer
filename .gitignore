@@ -1,0 +1,10 @@
+# flex and make output
+scanner.c
+lex.yy.c
+*.o
+compile
+lexemes.txt
+
+# editor and OS files
+.DS_Store
+*.swp
